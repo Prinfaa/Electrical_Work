@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.jawg.electricalshow.activities.MainActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <com.jawg.electricalshow.listview.SwipeListView
+            android:id="@+id/lvMitu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#00000000"
+            android:dividerHeight="@dimen/ui_15_dp"
+            />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/btnAddNewMitu"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:textColor="@color/colorDevice"
+        android:text="新增注册设备"/>
+
+
+
+
+
+
+</LinearLayout>
