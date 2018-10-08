@@ -4,22 +4,12 @@ package com.jawg.electricalshow.activities;
 import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 
-import com.jawg.electricalshow.Entries.MituType;
 import com.jawg.electricalshow.R;
 import com.jawg.electricalshow.common.BaseActivity;
-import com.jawg.electricalshow.utils.Url;
-import com.jawg.electricalshow.utils.http.HttpTool;
-import com.jawg.electricalshow.utils.http.SMObjectCallBack;
-import com.lidroid.xutils.http.RequestParams;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,15 +17,6 @@ import butterknife.OnClick;
 
 public class LoginActivity extends BaseActivity {
 
-
-    @BindView(R.id.ll_back)
-    LinearLayout llBack;
-    @BindView(R.id.ed_phone_num)
-    EditText edPhoneNum;
-    @BindView(R.id.ed_phone_pwd)
-    EditText edPhonePwd;
-    @BindView(R.id.btn_login)
-    Button btnLogin;
 
     private static final int REQUEST_CODE = 0; // 请求码
 
@@ -51,6 +32,14 @@ public class LoginActivity extends BaseActivity {
             Manifest.permission.ACCESS_COARSE_LOCATION,
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
+    @BindView(R.id.ed_phone_num)
+    EditText edPhoneNum;
+    @BindView(R.id.ed_phone_pwd)
+    EditText edPhonePwd;
+    @BindView(R.id.btn_login)
+    Button btnLogin;
+    @BindView(R.id.btn_forget_pwd)
+    Button btnForgetPwd;
     private PermissionsChecker mPermissionsChecker; // 权限检测器
 
 
@@ -80,7 +69,6 @@ public class LoginActivity extends BaseActivity {
     public void initData() {
 
 
-
     }
 
     @Override
@@ -89,19 +77,7 @@ public class LoginActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.ll_back, R.id.btn_login})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.ll_back:
-                break;
 
-            case R.id.btn_login:
-
-                intentMethod.startMethodOne(this, MainActivity.class);
-
-                break;
-        }
-    }
 
 
     private void startPermissionsActivity() {
@@ -120,5 +96,17 @@ public class LoginActivity extends BaseActivity {
 
 
 
+    @OnClick({R.id.btn_login, R.id.btn_forget_pwd})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.btn_login:
 
+                intentMethod.startMethodOne(this,MainActivity.class);
+
+
+                break;
+            case R.id.btn_forget_pwd:
+                break;
+        }
+    }
 }

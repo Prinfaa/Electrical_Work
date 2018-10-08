@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">电气检测建设者</string>
+    <string name="app_name">电气检测</string>
     <string name="service_error">网络不给力啊</string>
     <string name="xlistview_header_hint_normal">下拉刷新</string>
     <string name="xlistview_header_hint_ready">松开刷新数据</string>

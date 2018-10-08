@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/ui_50_dp"
-    android:background="#fff"
+    android:layout_height="@dimen/dp_50"
+    android:background="@color/colorPrimaryDark"
     android:id="@+id/fl_title"
     >
-    <TextView
+    <com.jawg.electricalshow.view.PingFangTextView
         android:id="@+id/top_name"
         style="@style/match_weight_style"
         android:layout_centerInParent="true"
         android:text="登录"
         android:maxLines="1"
-        android:textColor="@color/font_color7"
-        android:textSize="@dimen/title_big_size" />
+        android:textColor="@color/white"
+        android:textSize="20sp" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/ui_50_dp"
+        android:layout_height="@dimen/dp_50"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -27,12 +27,12 @@
 
             <ImageView
                 android:id="@+id/iv_back"
-                android:layout_width="12dp"
-                android:layout_height="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/ui_10_dp"
-                android:src="@mipmap/gray_back"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@mipmap/person"
                  />
         </LinearLayout>
 
@@ -53,12 +53,26 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical|right"
                 android:text="保存"
-                android:textColor="@color/black_trans"
+                android:textColor="@color/white"
                 android:visibility="gone"
-                android:textSize="@dimen/ui_16_sp"
-                android:paddingRight="@dimen/ui_10_dp"
+                android:textSize="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_10"
 
                 />
+
+
+            <ImageButton
+                android:id="@+id/btn_search"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:src="@mipmap/search"
+                android:background="@null"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical|right"
+                />
+
+
+
 
         </FrameLayout>
     </LinearLayout>

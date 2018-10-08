@@ -29,7 +29,7 @@
             android:layout_gravity="center"
             android:padding="6dp"
             android:textColor="@color/green_main"
-            android:textSize="@dimen/et_login_size" >
+            android:textSize="15sp" >
         </TextView>
     </LinearLayout>
 
