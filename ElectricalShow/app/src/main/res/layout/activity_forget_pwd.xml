@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activities.ForgetPwdActivity">
+
+    <include layout="@layout/include_back_top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        
+        <TextView
+            android:id="@+id/tv_title_input_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.输入手机号"
+            android:textSize="14sp"
+            android:textColor="@color/black_text"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  >  "
+            android:textSize="14sp"
+            android:textColor="@color/black_text"
+
+            />
+        <TextView
+            android:id="@+id/tv_title_input_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.输入验证码"
+            android:textSize="14sp"
+            android:textColor="@color/black_text"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  >  "
+            android:textSize="14sp"
+            android:textColor="@color/black_text"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_title_set_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.设置密码"
+            android:textSize="14sp"
+            android:textColor="@color/black_text"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/black_text"
+        android:text="验证短信已发送到177****0000"
+        android:visibility="visible"
+        />
+
+
+    <EditText
+        android:id="@+id/et_input_num"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        android:maxLines="1"
+        android:inputType="number"
+        android:background="@drawable/shape_forget_pwd_input"
+        android:paddingLeft="@dimen/dp_10"
+        android:hint="请输入您的手机号"
+        android:textColor="@color/black_text"
+        android:textSize="14sp"
+        android:visibility="gone"
+        />
+    <EditText
+        android:id="@+id/et_input_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        android:maxLines="1"
+        android:inputType="number"
+        android:background="@drawable/shape_forget_pwd_input"
+        android:paddingLeft="@dimen/dp_10"
+        android:hint="请输入您的验证码"
+        android:textColor="@color/black_text"
+        android:textSize="14sp"
+        android:visibility="gone"
+        />
+    <EditText
+        android:id="@+id/et_input_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:background="@drawable/shape_forget_pwd_input"
+        android:paddingLeft="@dimen/dp_10"
+        android:hint="请输入新密码"
+        android:textColor="@color/black_text"
+        android:textSize="14sp"
+        android:visibility="gone"
+        />
+    <EditText
+        android:id="@+id/et_input_sure_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:background="@drawable/shape_forget_pwd_input"
+        android:paddingLeft="@dimen/dp_10"
+        android:hint="确认新密码"
+        android:textColor="@color/black_text"
+        android:textSize="14sp"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tv_pwd_format"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="#a9a9a9"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="密码长度8-32位，须包含数字、字母、符号至少2种或以上元素"
+        />
+
+    <Button
+        android:id="@+id/btn_forget"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:background="@color/bottom_button_text_color"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        />
+
+
+
+
+
+</LinearLayout>

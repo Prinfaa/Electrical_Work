@@ -2,9 +2,217 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/white"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <include layout="@layout/include_top"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_320"
+        android:background="@drawable/shape_gradient"
+        android:paddingTop="@dimen/dp_30"
+        android:orientation="vertical"
+        >
 
+        <com.jawg.electricalshow.view.ClockView
+            android:id="@+id/cv_clock"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/dp_10"
+            app:mRadius="@dimen/dp_200"
+            />
+
+        <Button
+            android:id="@+id/btn_alarm_msg"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="right"
+            android:background="@drawable/shape_alarm_message"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:text="报警消息1条"
+            />
+        <Button
+            android:id="@+id/btn_tips_msg"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:text="提示消息1条"
+            android:background="@drawable/shape_alarm_message"
+            android:layout_marginBottom="@dimen/dp_15"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <!--负荷电流-->
+
+    <RelativeLayout
+        android:id="@+id/rl_electrial"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="负荷电流"
+            android:textColor="@color/login_background"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            />
+
+
+        <ImageView
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:src="@mipmap/right_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/home_line"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        />
+    <!--设备温度-->
+
+    <RelativeLayout
+        android:id="@+id/rl_temperature"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_10"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设备温度"
+            android:textColor="@color/login_background"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            />
+
+
+        <ImageView
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:src="@mipmap/right_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/home_line"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        />
+
+    <!--剩余电流-->
+    <RelativeLayout
+        android:id="@+id/rl_surplus"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_10"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剩余电流"
+            android:textColor="@color/login_background"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            />
+
+
+        <ImageView
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:src="@mipmap/right_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/home_line"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        />
+
+    <!--监测位置-->
+    <RelativeLayout
+        android:id="@+id/rl_address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_10"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="监测位置"
+            android:textColor="@color/login_background"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            />
+
+
+        <ImageView
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:src="@mipmap/right_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/home_line"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        />
+</LinearLayout>
+    </ScrollView>
 </LinearLayout>

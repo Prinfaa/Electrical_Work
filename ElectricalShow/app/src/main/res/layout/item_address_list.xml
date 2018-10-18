@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:padding="@dimen/dp_10"
+        android:orientation="vertical"
+        android:background="@mipmap/message_bg"
+        >
+
+       <TextView
+           android:id="@+id/tv_address"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColor="@color/black_text"
+           android:textSize="20sp"
+           android:text="5-1"
+           android:paddingRight="@dimen/dp_10"
+           android:paddingLeft="@dimen/dp_10"
+           />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:orientation="horizontal"
+            >
+            <com.jawg.electricalshow.view.PingFangTextView
+                android:id="@+id/tv_electrical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="负荷电流"
+                android:textSize="16sp"
+                android:textColor="#7f95d1"
+                />
+            <com.jawg.electricalshow.view.PingFangTextView
+                android:id="@+id/tv_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:gravity="center"
+                android:text="设备温度"
+                android:textSize="16sp"
+                android:textColor="#009688"
+                />
+            <com.jawg.electricalshow.view.PingFangTextView
+                android:id="@+id/tv_surplus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:gravity="center"
+                android:text="剩余电流"
+                android:textSize="16sp"
+                android:textColor="#2470a0"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

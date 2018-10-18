@@ -41,7 +41,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PermissionsActivity"/>
+        <activity android:name=".activities.PermissionsActivity" />
         <activity
             android:name=".activities.MainActivity"
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
@@ -52,6 +52,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.AlarmAndTipsMessageActivity" />
+        <activity android:name=".activities.HistoryMessageActivity" />
+        <activity android:name=".activities.CalendarSelectorActivity" />
+        <activity android:name=".activities.AddressListActivity" />
+        <activity android:name=".activities.FWSListActivity" />
+        <activity android:name=".activities.FWSSearchActivity" />
+        <activity android:name=".activities.DeviceActivity" />
+        <activity android:name=".activities.AddressItemListActivity" />
+        <activity android:name=".activities.BrokenLineStatisticsActivity" />
+        <activity android:name=".activities.ChangePersonDataActivity" />
+        <activity android:name=".activities.ChangePhotoActivity" />
+        <activity android:name=".activities.ChangePwdActivity" />
+        <activity android:name=".activities.ForgetPwdActivity" />
+        <activity android:name=".activities.AboutActivity"></activity>
+
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <service android:name=".MQTTService"/>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.jawg.electricalshow.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
     </application>
 
 </manifest>

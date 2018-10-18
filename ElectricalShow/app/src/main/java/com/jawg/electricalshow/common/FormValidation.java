@@ -5,7 +5,7 @@ import android.text.TextUtils;
 
 
 import com.jawg.electricalshow.utils.BaseUtils;
-import com.jawg.electricalshow.utils.Mycontants;
+import com.jawg.electricalshow.mInterface.Mycontants;
 import com.jawg.electricalshow.utils.Sptools;
 import com.jawg.electricalshow.utils.ToastUtil;
 

@@ -23,10 +23,10 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.jawg.electricalshow.mInterface.Mycontants;
 import com.jawg.electricalshow.R;
 import com.jawg.electricalshow.activities.LoginActivity;
 import com.jawg.electricalshow.utils.http.HttpTool;
@@ -70,7 +70,7 @@ public class BaseUtils {
 
 //        String telRegex = "[1][358]\\d{9}";//"[1]"代表第1位为数字1，"[358]"代表第二位可以为3、5、8中的一个，"\\d{9}"代表后面是可以是0～9的数字，有9位。
 
-        Pattern p = Pattern.compile("[1][358]\\d{9}");
+        Pattern p = Pattern.compile("^((13[0-9])|(14[5,7,9])|(15[^4])|(18[0-9])|(17[0,1,3,5,6,7,8]))\\d{8}$");//^((13[0-9])|(14[5,7,9])|(15[^4])|(18[0-9])|(17[0,1,3,5,6,7,8]))\d{8}$
         Matcher m = p.matcher(mobiles);
         return m.matches();
     }
@@ -120,6 +120,15 @@ public class BaseUtils {
             System.out.println("号码有误");
         }
         return flag;
+    }
+
+    /**
+     * 判断密码是否符合（6-16位字母和数字的组合）
+     */
+
+    public static boolean validatePhonePass(String pass) {
+        String passRegex = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$";
+        return !TextUtils.isEmpty(pass) && pass.matches(passRegex);
     }
 
     /**

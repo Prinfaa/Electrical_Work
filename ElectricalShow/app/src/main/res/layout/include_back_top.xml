@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ll_title"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/login_background"
         android:orientation="horizontal"
         >
 
@@ -21,12 +21,9 @@
             android:background="@null"
             android:src="@mipmap/login_back"
             />
-
-
         <com.jawg.electricalshow.view.PingFangTextView
             android:id="@+id/tv_title"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="经安纬固消防科技"
             android:textColor="@color/white"
@@ -40,10 +37,42 @@
             android:layout_height="@dimen/dp_50"
             android:src="@mipmap/search"
             android:background="@null"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            />
+        <ImageButton
+            android:id="@+id/btn_date"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:src="@mipmap/date"
+            android:background="@null"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            />
+        <ImageButton
+            android:id="@+id/btn_diagram"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:src="@mipmap/diagram"
+            android:background="@null"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            />
+
+        <Button
+            android:id="@+id/btn_history"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:text="历史"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@null"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
             />
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
-</LinearLayout>
+</FrameLayout>

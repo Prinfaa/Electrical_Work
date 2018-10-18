@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008489</color>
-    <color name="colorPrimaryDark">#2f4766</color>
+    <color name="colorPrimaryDark">#2f4777</color>
+    <color name="login_background">#2f4766</color>
     <color name="colorAccent">#006672</color>
     <color name="green_main">#84b130</color>
     <color name="green_text">#55b700</color>
     <color name="green_bg">#8bc12f</color>
     <color name="white">#ffffff</color>
     <color name="black_trans">#66000000</color>
+    <color name="black_text">#101010</color>
     <color name="font_color7">#636063</color>
     <color name="xian_my">#e0e0e0</color>
     <color name="login_color">#8291A3</color>
     <color name="bottom_button_text_color">#2f4766</color>
+    <color name="home_line">#cfcfcf</color>
+    <color name="red">#e94248</color>
+    <color name="message_text_color">#575757</color>
+    <color name="text_color">#101010</color>
+    <color name="electrical_text_color">#7f95d1</color>
+    <color name="temperature_text_color">#009688</color>
+    <color name="surplus_text_color">#2470a0</color>
 
 </resources>

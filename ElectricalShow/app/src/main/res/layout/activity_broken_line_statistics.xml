@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activities.BrokenLineStatisticsActivity">
+
+    <include layout="@layout/include_back_top"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="负荷电流"
+        android:textColor="@color/electrical_text_color"
+        android:textSize="@dimen/dp_20"
+
+        />
+
+    <com.jawg.electricalshow.view.MyLineChart
+        android:id="@+id/MP_electrical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        ></com.jawg.electricalshow.view.MyLineChart>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="设备温度"
+
+        android:textColor="@color/temperature_text_color"
+        android:textSize="@dimen/dp_20"
+
+        />
+
+    <com.jawg.electricalshow.view.MyLineChart
+        android:id="@+id/MP_temperature"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        ></com.jawg.electricalshow.view.MyLineChart>
+
+</LinearLayout>
